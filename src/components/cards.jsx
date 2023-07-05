@@ -14,7 +14,7 @@ export function Card({
     baseStyle +
     (className ?? " ") +
     " " +
-    (canScale ? "hover:scale-105  " : "") +
+    (canScale ? "hover:scale-105 mmd:hover:scale-100 " : "") +
     " " +
     (isClickable ? " hover:lightblue-blue-bg-lg cursor-pointer" : "");
 
@@ -29,7 +29,7 @@ export function Card({
   );
 
   return (
-    <div className={topLevelStyle}>
+    <div aria-required="false" className={topLevelStyle}>
       {to != "#" ? (
         <Link
           to={to}
@@ -48,7 +48,7 @@ export function FixedSizedCard({ title, to }) {
   return (
     <Card
       className={
-        " md:w-[400px] md:h-[240px] sm:w-5/6 sm:h-3/4 bg-gradient-to-r from-rose-300 to-violet-500 p-1"
+        " md:w-[400px] md:h-[240px]  bg-gradient-to-r from-rose-300 to-violet-500 p-1 mmd:h-[300px] "
       }
       to={to}
     >
