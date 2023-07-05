@@ -6,7 +6,8 @@ import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
+    {/* setting basename only to work for github pages. may fail for other deployments */}
+    <BrowserRouter basename={import.meta.env.DEV ? "/" : "/portfolio2/"}>
       <App />
     </BrowserRouter>
   </React.StrictMode>
