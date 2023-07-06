@@ -21,6 +21,7 @@ export function Card({
   let content = src ? (
     <img
       src={src}
+      loading="lazy"
       className="w-full h-full rounded-lg
   "
     ></img>
